@@ -28,7 +28,7 @@ export default function ToggleNotifications() {
                 <span className="sr-only">Toggle notifications</span>
               </div>
             </TooltipTrigger>
-            <TooltipContent className="font-normal rounded-full">
+            <TooltipContent>
               <p>Notifications</p>
             </TooltipContent>
           </Tooltip>

@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export default function Page() {
   return (
@@ -6,8 +6,15 @@ export default function Page() {
       <div className="flex items-center">
         <h1 className="text-lg font-heading font-semibold md:text-2xl">Operators</h1>
       </div>
-      <div className="flex flex-1 items-center justify-center rounded-lg border border-dashed shadow-sm" x-chunk="dashboard-02-chunk-1">
-        <Link href="/dashboard">Dashboard</Link>
+      <div className="flex flex-1">
+        <Tabs defaultValue="account" className="w-[400px]">
+          <TabsList>
+            <TabsTrigger value="installed">Installed</TabsTrigger>
+            <TabsTrigger value="operatorhub">Operator hub</TabsTrigger>
+          </TabsList>
+          <TabsContent value="installed">Make changes to your account here.</TabsContent>
+          <TabsContent value="operatorhub">Change your password here.</TabsContent>
+        </Tabs>
       </div>
     </>
   )

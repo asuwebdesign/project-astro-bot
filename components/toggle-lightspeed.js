@@ -28,7 +28,7 @@ export default function ToggleLightspeed() {
                 <span className="sr-only">Toggle events</span>
               </div>
             </TooltipTrigger>
-            <TooltipContent className="font-normal rounded-full">
+            <TooltipContent>
               <p>AI Chat</p>
             </TooltipContent>
           </Tooltip>

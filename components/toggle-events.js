@@ -28,7 +28,7 @@ export default function ToggleEvents() {
                 <span className="sr-only">Toggle events</span>
               </div>
             </TooltipTrigger>
-            <TooltipContent className="font-normal rounded-full">
+            <TooltipContent>
               <p>Events</p>
             </TooltipContent>
           </Tooltip>

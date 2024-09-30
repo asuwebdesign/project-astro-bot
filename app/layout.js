@@ -54,18 +54,20 @@ import ToggleNotifications from "@/components/toggle-notifications"
 import ToggleLightspeed from "@/components/toggle-lightspeed"
 import ToggleAccount from "@/components/toggle-account"
 import { Navigation } from '@/components/navigation'
+import { NavLink } from '@/components/nav-link'
+import { NavigationUtility } from '@/components/navigation-utility'
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`font-text antialiased`}>
         <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
-          <div className="hidden  bg-muted/70 md:block">
+          <div className="hidden bg-zinc-900 text-white md:block">
             <div className="flex h-full max-h-screen flex-col gap-4">
               <div className="flex h-14 items-center px-4 lg:h-[60px] px-2 w-full">
                 <Link href="/" className="w-full">
-                  <Button variant="ghost" className="flex items-center justify-start gap-4 w-full rounded-full font-heading text-md hover:bg-gray-200">
-                    <Circle className="h-5 w-5" />
+                  <Button variant="ghost" className="flex items-center justify-start gap-4 w-full rounded-full font-heading text-md hover:bg-zinc-700 hover:text-white">
+                    <Circle className="h-5 w-5 stroke-red-500" />
                     <div>
                       <span className="font-semibold">Red Hat</span> <span className="">OpenShift</span>
                     </div>
@@ -77,16 +79,8 @@ export default function RootLayout({ children }) {
               </div>
 
               <div className="lg:p-4">
-                <hr className="my-2" />
-                <Link href="/operators" className="">
-                  <Button variant="ghost" className="flex items-center justify-between w-full rounded-full hover:bg-gray-200">
-                    <div className="flex items-center gap-4">
-                      <Plug2 className="h-5 w-5" />
-                      <h4 className="text-sm font-heading font-medium">Operators</h4>
-                    </div>
-                    <Badge>12</Badge>
-                  </Button>
-                </Link>
+                <hr className="my-4 border-zinc-700" />
+                <NavigationUtility />
               </div>
 
             </div>

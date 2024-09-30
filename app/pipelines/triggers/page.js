@@ -1,3 +1,4 @@
+import { DatatypeHeader } from "@/components/datatype-header"
 import {
   Table,
   TableBody,
@@ -7,13 +8,15 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import { GitCompare } from "lucide-react"
 
 export default function Page() {
+
+  const info = ''
+
   return (
     <>
-      <div className="flex items-center">
-        <h1 className="text-lg font-heading font-semibold md:text-2xl">Triggers</h1>
-      </div>
+      <DatatypeHeader icon={<GitCompare className="w-6 h-6" />} title="Triggers" count="10" info={info} buttonLabel="Trigger" />
       <div className="flex flex-1">
 
         <Table>

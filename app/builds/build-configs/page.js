@@ -9,105 +9,289 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { ListFilter, Plus, Search } from "lucide-react"
+import { Blocks, Ellipsis, Info, ListFilter, Plus, Search } from "lucide-react"
 import { Input } from "@/components/ui/input"
-
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card"
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
+import { DatatypeHeader } from "@/components/datatype-header"
 
 export default function Page() {
+
+  const info = <>
+    <ul className="mb-2 flex flex-col gap-2 text-sm">
+      <li>A <strong className="font-medium">build config</strong> is a resource object that defines the details of how to build and produce a container image from source code.</li>
+      <li>It automates the process of turning application code into deployable container images.</li>
+      <li>Build configs are part of OpenShift&apos;s build system and can be triggered manually or automatically based on changes to the source code or other triggers.</li>
+    </ul>
+  </>
+
   return (
     <>
-      <div className="flex items-center justify-between">
-        <h1 className="flex items-center gap-2 text-lg font-heading font-semibold md:text-2xl">Build configs <Badge>10</Badge></h1>
-        <div className="flex items-center gap-8">
-          <div className="flex items-center gap-4">
-            <Button variant="outline" className="pr-6 gap-2 rounded-full"><ListFilter className="h-4 w-4" /> Filter</Button>
-            <div className="w-80">
-              <form>
-                <div className="relative">
-                  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-                  <Input type="search" placeholder="Search build configs..." className="w-full appearance-none bg-background pl-8 shadow-none rounded-full" />
-                </div>
-              </form>
-            </div>
-          </div>
-          <Button className="pr-6 gap-2 rounded-full"><Plus className="h-4 w-4" /> Build config</Button>
-        </div>
-      </div>
-      <div className="flex flex-1">
+      <DatatypeHeader icon={<Blocks className="w-6 h-6" />} title="Build configs" count="10" info={info} buttonLabel="Build config" />
 
-        {/* Filter, search... */}
-        {/* Create ... */}
-        {/* Name, namespace, last run, last run status, last run time, last run duration */}
+      <div className="grid grid-cols-4 gap-6">
+        <Card x-chunk="dashboard-05-chunk-1">
+          <CardHeader className="pb-2">
+            <CardDescription>This Week</CardDescription>
+            <CardTitle className="text-4xl">1,329</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-xs text-muted-foreground">
+              +25% from last week
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card x-chunk="dashboard-05-chunk-1">
+          <CardHeader className="pb-2">
+            <CardDescription>This Week</CardDescription>
+            <CardTitle className="text-4xl">1,329</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-xs text-muted-foreground">
+              +25% from last week
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card x-chunk="dashboard-05-chunk-1">
+          <CardHeader className="pb-2">
+            <CardDescription>This Week</CardDescription>
+            <CardTitle className="text-4xl">1,329</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-xs text-muted-foreground">
+              +25% from last week
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card x-chunk="dashboard-05-chunk-1">
+          <CardHeader className="pb-2">
+            <CardDescription>This Week</CardDescription>
+            <CardTitle className="text-4xl">1,329</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-xs text-muted-foreground">
+              +25% from last week
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
+      <div className="flex flex-1">
 
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="w-[100px]">Invoice</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead>Method</TableHead>
-              <TableHead className="text-right">Amount</TableHead>
+              <TableHead>Name</TableHead>
+              <TableHead>Namespace</TableHead>
+              <TableHead>Last run</TableHead>
+              <TableHead>Last run status</TableHead>
+              <TableHead>Last run time</TableHead>
+              <TableHead>Last run duration</TableHead>
+              <TableHead></TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2 font-medium">
+                  <Badge className=" font-medium">BC</Badge>frontend-app-build
+                </div>
+              </TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2">
+                  <Badge className="font-medium" variant="secondary">NS</Badge>frontend-dev
+                </div>
+              </TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>
+                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2 font-medium">
+                  <Badge className=" font-medium">BC</Badge>backend-service-build
+                </div>
+              </TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2">
+                  <Badge className="font-medium" variant="secondary">NS</Badge>backend-api
+                </div>
+              </TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>
+                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2 font-medium">
+                  <Badge className=" font-medium">BC</Badge>database-migration-build
+                </div>
+              </TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2">
+                  <Badge className="font-medium" variant="secondary">NS</Badge>db-migrations
+                </div>
+              </TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>
+                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2 font-medium">
+                  <Badge className=" font-medium">BC</Badge>auth-service-build
+                </div>
+              </TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2">
+                  <Badge className="font-medium" variant="secondary">NS</Badge>auth-dev
+                </div>
+              </TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>
+                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2 font-medium">
+                  <Badge className=" font-medium">BC</Badge>payment-gateway-build
+                </div>
+              </TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2">
+                  <Badge className="font-medium" variant="secondary">NS</Badge>payment-services
+                </div>
+              </TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>
+                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2 font-medium">
+                  <Badge className=" font-medium">BC</Badge>notifications-service-build
+                </div>
+              </TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2">
+                  <Badge className="font-medium" variant="secondary">NS</Badge>notifications
+                </div>
+              </TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>
+                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2 font-medium">
+                  <Badge className=" font-medium">BC</Badge>analytics-pipeline-build
+                </div>
+              </TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2">
+                  <Badge className="font-medium" variant="secondary">NS</Badge>data-analytics
+                </div>
+              </TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>
+                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2 font-medium">
+                  <Badge className=" font-medium">BC</Badge>logging-service-build
+                </div>
+              </TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2">
+                  <Badge className="font-medium" variant="secondary">NS</Badge>infra-logging
+                </div>
+              </TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>
+                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2 font-medium">
+                  <Badge className=" font-medium">BC</Badge>ci-pipeline-build
+                </div>
+              </TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2">
+                  <Badge className="font-medium" variant="secondary">NS</Badge>ci-cd
+                </div>
+              </TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>
+                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2 font-medium">
+                  <Badge className=" font-medium">BC</Badge>load-balancer-build
+                </div>
+              </TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2">
+                  <Badge className="font-medium" variant="secondary">NS</Badge>networking-infra
+                </div>
+              </TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>
+                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
+              </TableCell>
             </TableRow>
           </TableBody>
         </Table>

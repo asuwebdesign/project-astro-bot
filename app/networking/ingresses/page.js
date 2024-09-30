@@ -1,3 +1,4 @@
+import { DatatypeHeader } from "@/components/datatype-header"
 import {
   Table,
   TableBody,
@@ -7,13 +8,15 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import { Cpu, Network } from "lucide-react"
 
 export default function Page() {
+
+  const info = ''
+
   return (
     <>
-      <div className="flex items-center">
-        <h1 className="text-lg font-heading font-semibold md:text-2xl">Ingresses</h1>
-      </div>
+      <DatatypeHeader icon={<Network className="w-6 h-6" />} title="Ingresses" count="10" info={info} buttonLabel="Ingress" />
       <div className="flex flex-1">
 
         <Table>

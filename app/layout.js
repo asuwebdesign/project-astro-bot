@@ -56,6 +56,8 @@ import ToggleAccount from "@/components/toggle-account"
 import { Navigation } from '@/components/navigation'
 import { NavLink } from '@/components/nav-link'
 import { NavigationUtility } from '@/components/navigation-utility'
+import RedHatIconMark from '@/public/assets/redhat-iconmark.svg'
+import Image from 'next/image'
 
 export default function RootLayout({ children }) {
   return (
@@ -63,23 +65,24 @@ export default function RootLayout({ children }) {
       <body className={`font-text antialiased`}>
         <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
           <div className="hidden bg-zinc-900 text-white md:block">
-            <div className="relative flex h-full max-h-screen flex-col gap-4">
-              <div className="flex h-14 items-center px-4 lg:h-[60px] px-2 w-full z-10">
-                <Link href="/" className="w-full">
+            <div className="relative flex h-full max-h-screen flex-col">
+              <div className="flex h-14 items-center px-4 lg:h-[60px] px-7 w-full z-10">
+              <Image src="/assets/redhat-iconmark.svg" width={32} height={32} alt="Red Hat iconmark" />
+                {/* <Link href="/" className="w-full">
                   <Button variant="ghost" className="flex items-center justify-start gap-4 w-full rounded-full font-heading text-md hover:bg-zinc-700 hover:text-white">
                     <Circle className="h-5 w-5 stroke-red-500" />
                     <div>
                       <span className="font-semibold">Red Hat</span> <span className="">OpenShift</span>
                     </div>
                   </Button>
-                </Link>
+                </Link> */}
               </div>
-              <div className="flex-1 overflow-y-auto z-10">
+              <div className="flex-1 pt-6 overflow-y-auto z-10">
                 <Navigation />
               </div>
 
-              <div className="lg:p-4 z-10">
-                <hr className="my-4 border-zinc-700" />
+              <div className="lg:px-4 z-10">
+                <hr className="mb-4 border-zinc-700" />
                 <NavigationUtility />
               </div>
 

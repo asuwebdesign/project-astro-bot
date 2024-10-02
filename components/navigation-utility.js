@@ -41,7 +41,7 @@ export function NavigationUtility() {
     <nav className="grid items-start gap-4 mb-4 text-sm">
       <Collapsible>
         <CollapsibleTrigger asChild>
-          <Button variant={pathname.startsWith('/builds') ? '' : 'ghost'} className={pathname.startsWith('/builds') ? navHeadingActiveClasses : navHeadingDefaultClasses}>
+          <Button variant={pathname.startsWith('/administration') ? '' : 'ghost'} className={pathname.startsWith('/administration') ? navHeadingActiveClasses : navHeadingDefaultClasses}>
             <div className="flex items-center gap-4">
               <Cog className="h-5 w-5" />
               <h4 className="text-sm font-heading font-medium">Administration</h4>
@@ -72,7 +72,7 @@ export function NavigationUtility() {
 
       <Collapsible>
         <CollapsibleTrigger asChild>
-          <Button variant={pathname.startsWith('/builds') ? '' : 'ghost'} className={pathname.startsWith('/builds') ? navHeadingActiveClasses : navHeadingDefaultClasses}>
+          <Button variant={pathname.startsWith('/user-management') ? '' : 'ghost'} className={pathname.startsWith('/user-management') ? navHeadingActiveClasses : navHeadingDefaultClasses}>
             <div className="flex items-center gap-4">
               <Users className="h-5 w-5" />
               <h4 className="text-sm font-heading font-medium">User management</h4>

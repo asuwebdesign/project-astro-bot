@@ -63,8 +63,8 @@ export default function RootLayout({ children }) {
       <body className={`font-text antialiased`}>
         <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
           <div className="hidden bg-zinc-900 text-white md:block">
-            <div className="flex h-full max-h-screen flex-col gap-4">
-              <div className="flex h-14 items-center px-4 lg:h-[60px] px-2 w-full">
+            <div className="relative flex h-full max-h-screen flex-col gap-4">
+              <div className="flex h-14 items-center px-4 lg:h-[60px] px-2 w-full z-10">
                 <Link href="/" className="w-full">
                   <Button variant="ghost" className="flex items-center justify-start gap-4 w-full rounded-full font-heading text-md hover:bg-zinc-700 hover:text-white">
                     <Circle className="h-5 w-5 stroke-red-500" />
@@ -74,14 +74,18 @@ export default function RootLayout({ children }) {
                   </Button>
                 </Link>
               </div>
-              <div className="flex-1 overflow-y-auto">
+              <div className="flex-1 overflow-y-auto z-10">
                 <Navigation />
               </div>
 
-              <div className="lg:p-4">
+              <div className="lg:p-4 z-10">
                 <hr className="my-4 border-zinc-700" />
                 <NavigationUtility />
               </div>
+
+              {/* <video className="absolute w-full h-full object-cover opacity-25 blur-sm mix-blend-luminosity z-0" autoPlay muted loop id="myVideo">
+                <source src="/assets/abstract.mov" type="video/mp4" />
+              </video> */}
 
             </div>
           </div>

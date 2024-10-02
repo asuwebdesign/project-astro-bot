@@ -1,0 +1,91 @@
+[
+  {
+    "id": 1,
+    "name": "frontend-app-build",
+    "namespace": "frontend-dev",
+    "lastRun": "",
+    "lastRunStatus": "",
+    "lastRunTime": "",
+    "lastRunDuration": ""
+  },
+  {
+    "id": 2,
+    "name": "backend-service-build",
+    "namespace": "backend-api",
+    "lastRun": "",
+    "lastRunStatus": "",
+    "lastRunTime": "",
+    "lastRunDuration": ""
+  },{
+    "id": 3,
+    "name": "database-migration-build",
+    "namespace": "db-migrations",
+    "lastRun": "",
+    "lastRunStatus": "",
+    "lastRunTime": "",
+    "lastRunDuration": ""
+  },
+  {
+    "id": 4,
+    "name": "auth-service-build",
+    "namespace": "auth-dev",
+    "lastRun": "",
+    "lastRunStatus": "",
+    "lastRunTime": "",
+    "lastRunDuration": ""
+  },
+  {
+    "id": 5,
+    "name": "payment-gateway-build",
+    "namespace": "payment-services",
+    "lastRun": "",
+    "lastRunStatus": "",
+    "lastRunTime": "",
+    "lastRunDuration": ""
+  },
+  {
+    "id": 6,
+    "name": "notifications-service-build",
+    "namespace": "notifications",
+    "lastRun": "",
+    "lastRunStatus": "",
+    "lastRunTime": "",
+    "lastRunDuration": ""
+  },
+  {
+    "id": 7,
+    "name": "analytics-pipeline-build",
+    "namespace": "data-analytics",
+    "lastRun": "",
+    "lastRunStatus": "",
+    "lastRunTime": "",
+    "lastRunDuration": ""
+  },
+  {
+    "id": 8,
+    "name": "logging-service-build",
+    "namespace": "infra-logging",
+    "lastRun": "",
+    "lastRunStatus": "",
+    "lastRunTime": "",
+    "lastRunDuration": ""
+  },
+  {
+    "id": 9,
+    "name": "ci-pipeline-build",
+    "namespace": "ci-cd",
+    "lastRun": "",
+    "lastRunStatus": "",
+    "lastRunTime": "",
+    "lastRunDuration": ""
+  },
+  {
+    "id": 10,
+    "name": "load-balancer-build",
+    "namespace": "networking-infra",
+    "lastRun": "",
+    "lastRunStatus": "",
+    "lastRunTime": "",
+    "lastRunDuration": ""
+  }
+]

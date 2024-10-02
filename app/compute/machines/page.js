@@ -14,9 +14,10 @@ import {
 } from "@/components/ui/popover"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Cpu, Ellipsis, Info, ListFilter, Plus, Search } from "lucide-react"
+import { CircleCheck, Cpu, Ellipsis, Info, ListFilter, Plus, Search } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { DatatypeHeader } from "@/components/datatype-header"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function Page() {
 
@@ -30,77 +31,95 @@ export default function Page() {
   return (
     <>
       <DatatypeHeader icon={<Cpu className="w-6 h-6" />} title="Machines" count="10" info={info} buttonLabel="Machine" />
+
+      <div className="grid grid-cols-4 gap-6">
+        <Card x-chunk="dashboard-05-chunk-1">
+          <CardHeader className="pb-2">
+            <CardDescription>This Week</CardDescription>
+            <CardTitle className="text-4xl">1,329</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-xs text-muted-foreground">
+              +25% from last week
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card x-chunk="dashboard-05-chunk-1">
+          <CardHeader className="pb-2">
+            <CardDescription>This Week</CardDescription>
+            <CardTitle className="text-4xl">1,329</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-xs text-muted-foreground">
+              +25% from last week
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card x-chunk="dashboard-05-chunk-1">
+          <CardHeader className="pb-2">
+            <CardDescription>This Week</CardDescription>
+            <CardTitle className="text-4xl">1,329</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-xs text-muted-foreground">
+              +25% from last week
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card x-chunk="dashboard-05-chunk-1">
+          <CardHeader className="pb-2">
+            <CardDescription>This Week</CardDescription>
+            <CardTitle className="text-4xl">1,329</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-xs text-muted-foreground">
+              +25% from last week
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
       <div className="flex flex-1">
 
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="w-[100px]">Invoice</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead>Method</TableHead>
-              <TableHead className="text-right">Amount</TableHead>
+              <TableHead>Name</TableHead>
+              <TableHead>Node</TableHead>
+              <TableHead>Phase</TableHead>
+              <TableHead>Provider State</TableHead>
+              <TableHead>Region</TableHead>
+              <TableHead>Availability Zone</TableHead>
+              <TableHead></TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell className="font-medium">INV001</TableCell>
-              <TableCell>Paid</TableCell>
-              <TableCell>Credit Card</TableCell>
-              <TableCell className="text-right">$250.00</TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2 font-medium">
+                  <Badge className=" font-medium">M</Badge>rhamilto-njptx-master-0
+                </div>
+              </TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2">
+                  <Badge className="font-medium" variant="secondary">NS</Badge>ip-10-0-30-131.us-west-1.compute.internal
+                </div>
+              </TableCell>
+              <TableCell>
+                <div className="flex items-center gap-2">
+                  <CircleCheck className="w-5 h-5" />
+                  Provisioned as node
+                </div>
+              </TableCell>
+              <TableCell>Running</TableCell>
+              <TableCell>US-West-1</TableCell>
+              <TableCell>US-West-1A</TableCell>
+              <TableCell>
+                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
+              </TableCell>
             </TableRow>
           </TableBody>
         </Table>

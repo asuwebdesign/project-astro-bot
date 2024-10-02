@@ -23,6 +23,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import { DatatypeHeader } from "@/components/datatype-header"
+import data from './data.json'
 
 export default function Page() {
 
@@ -103,196 +104,27 @@ export default function Page() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            <TableRow>
-              <TableCell>
-                <div className="flex items-center gap-2 font-medium">
-                  <Badge className=" font-medium">BC</Badge>frontend-app-build
-                </div>
-              </TableCell>
-              <TableCell>
-                <div className="flex items-center gap-2">
-                  <Badge className="font-medium" variant="secondary">NS</Badge>frontend-dev
-                </div>
-              </TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>
-                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
-                <div className="flex items-center gap-2 font-medium">
-                  <Badge className=" font-medium">BC</Badge>backend-service-build
-                </div>
-              </TableCell>
-              <TableCell>
-                <div className="flex items-center gap-2">
-                  <Badge className="font-medium" variant="secondary">NS</Badge>backend-api
-                </div>
-              </TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>
-                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
-                <div className="flex items-center gap-2 font-medium">
-                  <Badge className=" font-medium">BC</Badge>database-migration-build
-                </div>
-              </TableCell>
-              <TableCell>
-                <div className="flex items-center gap-2">
-                  <Badge className="font-medium" variant="secondary">NS</Badge>db-migrations
-                </div>
-              </TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>
-                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
-                <div className="flex items-center gap-2 font-medium">
-                  <Badge className=" font-medium">BC</Badge>auth-service-build
-                </div>
-              </TableCell>
-              <TableCell>
-                <div className="flex items-center gap-2">
-                  <Badge className="font-medium" variant="secondary">NS</Badge>auth-dev
-                </div>
-              </TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>
-                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
-                <div className="flex items-center gap-2 font-medium">
-                  <Badge className=" font-medium">BC</Badge>payment-gateway-build
-                </div>
-              </TableCell>
-              <TableCell>
-                <div className="flex items-center gap-2">
-                  <Badge className="font-medium" variant="secondary">NS</Badge>payment-services
-                </div>
-              </TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>
-                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
-                <div className="flex items-center gap-2 font-medium">
-                  <Badge className=" font-medium">BC</Badge>notifications-service-build
-                </div>
-              </TableCell>
-              <TableCell>
-                <div className="flex items-center gap-2">
-                  <Badge className="font-medium" variant="secondary">NS</Badge>notifications
-                </div>
-              </TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>
-                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
-                <div className="flex items-center gap-2 font-medium">
-                  <Badge className=" font-medium">BC</Badge>analytics-pipeline-build
-                </div>
-              </TableCell>
-              <TableCell>
-                <div className="flex items-center gap-2">
-                  <Badge className="font-medium" variant="secondary">NS</Badge>data-analytics
-                </div>
-              </TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>
-                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
-                <div className="flex items-center gap-2 font-medium">
-                  <Badge className=" font-medium">BC</Badge>logging-service-build
-                </div>
-              </TableCell>
-              <TableCell>
-                <div className="flex items-center gap-2">
-                  <Badge className="font-medium" variant="secondary">NS</Badge>infra-logging
-                </div>
-              </TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>
-                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
-                <div className="flex items-center gap-2 font-medium">
-                  <Badge className=" font-medium">BC</Badge>ci-pipeline-build
-                </div>
-              </TableCell>
-              <TableCell>
-                <div className="flex items-center gap-2">
-                  <Badge className="font-medium" variant="secondary">NS</Badge>ci-cd
-                </div>
-              </TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>
-                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>
-                <div className="flex items-center gap-2 font-medium">
-                  <Badge className=" font-medium">BC</Badge>load-balancer-build
-                </div>
-              </TableCell>
-              <TableCell>
-                <div className="flex items-center gap-2">
-                  <Badge className="font-medium" variant="secondary">NS</Badge>networking-infra
-                </div>
-              </TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>-</TableCell>
-              <TableCell>
-                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
-              </TableCell>
-            </TableRow>
+            {data.map(item => (
+              <TableRow key={item.id}>
+                <TableCell>
+                  <div className="flex items-center gap-2 font-medium">
+                    <Badge className=" font-medium">BC</Badge>{item.name}
+                  </div>
+                </TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    <Badge className="font-medium" variant="secondary">NS</Badge>{item.namespace}
+                  </div>
+                </TableCell>
+                <TableCell>{item.lastRun}</TableCell>
+                <TableCell>{item.lastRunStatus}</TableCell>
+                <TableCell>{item.lastRunTime}</TableCell>
+                <TableCell>{item.lastRunDuration}</TableCell>
+                <TableCell>
+                  <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
+                </TableCell>
+              </TableRow>
+            ))}
           </TableBody>
         </Table>
 

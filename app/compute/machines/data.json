@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "rhamilto-njptx-master-0",
+    "node": "ip-10-0-30-131.us-west-1.compute.internal",
+    "phase": "Provisioned as node",
+    "providerState": "Running",
+    "region": "US-West-1",
+    "availabilityZone": "US-West-1A"
+  }
+]

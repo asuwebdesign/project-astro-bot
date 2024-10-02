@@ -18,6 +18,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import { DatatypeHeader } from "@/components/datatype-header"
+import data from './data.json'
 
 export default function Page() {
 
@@ -95,26 +96,28 @@ export default function Page() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            <TableRow>
-              <TableCell>
-                <div className="flex items-center gap-2 font-medium">
-                  <Badge className=" font-medium">IS</Badge>frontend-app-build
-                </div>
-              </TableCell>
-              <TableCell>
-                <div className="flex items-center gap-2">
-                  {/* <Badge className="font-medium" variant="secondary">NS</Badge>frontend-dev */}
-                </div>
-              </TableCell>
-              <TableCell>
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-5 h-5" /> Sep 23, 2024 - 7:48am
-                </div>
-              </TableCell>
-              <TableCell>
-                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
-              </TableCell>
-            </TableRow>
+            {data.map(item => (
+              <TableRow key={item.id}>
+                <TableCell>
+                  <div className="flex items-center gap-2 font-medium">
+                    <Badge className=" font-medium">IS</Badge>{item.name}
+                  </div>
+                </TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    {/* <Badge className="font-medium" variant="secondary">NS</Badge>frontend-dev */}
+                  </div>
+                </TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-5 h-5" /> {item.created}
+                  </div>
+                </TableCell>
+                <TableCell>
+                  <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
+                </TableCell>
+              </TableRow>
+            ))}
           </TableBody>
         </Table>
 

@@ -18,6 +18,7 @@ import { Cpu, Ellipsis, Info, ListFilter, Plus, Search } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { DatatypeHeader } from "@/components/datatype-header"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import data from './data.json'
 
 export default function Page() {
 
@@ -90,23 +91,25 @@ export default function Page() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            <TableRow>
-              <TableCell>
-                <div className="flex items-center gap-2 font-medium">
-                  <Badge className=" font-medium">MA</Badge>rhamilto-njptx-master-0
-                </div>
-              </TableCell>
-              <TableCell>
-                <div className="flex items-center gap-2">
-                  <Badge className="font-medium" variant="secondary">MS</Badge>ip-10-0-30-131.us-west-1.compute.internal
-                </div>
-              </TableCell>
-              <TableCell>1</TableCell>
-              <TableCell>12</TableCell>
-              <TableCell>
-                <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
-              </TableCell>
-            </TableRow>
+            {data.map(item => (
+              <TableRow key={item.id}>
+                <TableCell>
+                  <div className="flex items-center gap-2 font-medium">
+                    <Badge className=" font-medium">MA</Badge>{item.name}
+                  </div>
+                </TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    <Badge className="font-medium" variant="secondary">MS</Badge>{item.scaleTarget}
+                  </div>
+                </TableCell>
+                <TableCell>{item.minReplicas}</TableCell>
+                <TableCell>{item.maxReplicas}</TableCell>
+                <TableCell>
+                  <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
+                </TableCell>
+              </TableRow>
+            ))}
           </TableBody>
         </Table>
 

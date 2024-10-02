@@ -9,7 +9,9 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { CircleCheck, Cpu } from "lucide-react"
+import { CircleCheck, Cpu, Ellipsis } from "lucide-react"
+import data from './data.json'
+import { Button } from "@/components/ui/button"
 
 export default function Page() {
 
@@ -35,6 +37,27 @@ export default function Page() {
             </TableRow>
           </TableHeader>
           <TableBody>
+            {data.map(item => (
+              <TableRow key={item.id}>
+                <TableCell>
+                  <div className="flex items-center gap-2 font-medium">
+                    <Badge className=" font-medium">BC</Badge>{item.name}
+                  </div>
+                </TableCell>
+                <TableCell>
+                  <div className="flex items-center gap-2">
+                    <Badge className="font-medium" variant="secondary">NS</Badge>{item.namespace}
+                  </div>
+                </TableCell>
+                <TableCell>{item.lastRun}</TableCell>
+                <TableCell>{item.lastRunStatus}</TableCell>
+                <TableCell>{item.lastRunTime}</TableCell>
+                <TableCell>{item.lastRunDuration}</TableCell>
+                <TableCell>
+                  <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
+                </TableCell>
+              </TableRow>
+            ))}
             <TableRow>
               <TableCell>
                 <div className="flex items-center gap-2 font-medium">

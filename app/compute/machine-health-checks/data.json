@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "name": "rhamilto-njptx-master-0",
+    "scaleTarget": "ip-10-0-30-131.us-west-1.compute.internal",
+    "minReplicas": 1,
+    "maxReplicas": 12
+  }
+]

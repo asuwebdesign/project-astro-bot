@@ -1,3 +1,5 @@
+'use client'
+
 import { DatatypeHeader } from "@/components/datatype-header"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Cog } from "lucide-react"

@@ -189,14 +189,13 @@ export default function RootLayout({ children }) {
                   </form>
                 </div>
 
-                <ModeToggle />
-
                 <ProjectSelector />
 
                 <div className="flex gap-2">
                   <ToggleEvents />
                   <ToggleNotifications />
                   <ToggleLightspeed />
+                  <ModeToggle />
                 </div>
 
                 <ToggleAccount />

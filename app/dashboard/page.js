@@ -1,3 +1,5 @@
+'use client'
+
 import Link from "next/link"
 import {
   Bell,
@@ -73,7 +75,6 @@ import ToggleEvents from "@/components/toggle-events"
 import ToggleNotifications from "@/components/toggle-notifications"
 import ToggleLightspeed from "@/components/toggle-lightspeed"
 import ToggleAccount from "@/components/toggle-account"
-
 
 export default function Page() {
   return (

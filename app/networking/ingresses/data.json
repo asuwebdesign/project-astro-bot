@@ -1,8 +1,90 @@
 [
   {
-    "id": 1,
-    "name": "",
-    "labels": "",
-    "hosts": ""
+    "id": "ingress-001",
+    "name": "app-ingress-frontend",
+    "labels": {
+      "app": "frontend",
+      "environment": "production"
+    },
+    "hosts": [
+      "frontend.example.com"
+    ]
+  },
+  {
+    "id": "ingress-002",
+    "name": "app-ingress-backend",
+    "labels": {
+      "app": "backend",
+      "environment": "production"
+    },
+    "hosts": [
+      "backend.example.com"
+    ]
+  },
+  {
+    "id": "ingress-003",
+    "name": "admin-ingress",
+    "labels": {
+      "app": "admin",
+      "environment": "staging"
+    },
+    "hosts": [
+      "admin.staging.example.com"
+    ]
+  },
+  {
+    "id": "ingress-004",
+    "name": "api-ingress",
+    "labels": {
+      "app": "api",
+      "environment": "production"
+    },
+    "hosts": [
+      "api.example.com"
+    ]
+  },
+  {
+    "id": "ingress-005",
+    "name": "edge-ingress",
+    "labels": {
+      "app": "edge-service",
+      "environment": "development"
+    },
+    "hosts": [
+      "edge-dev.example.com"
+    ]
+  },
+  {
+    "id": "ingress-006",
+    "name": "monitoring-ingress",
+    "labels": {
+      "app": "monitoring",
+      "environment": "production"
+    },
+    "hosts": [
+      "monitoring.example.com"
+    ]
+  },
+  {
+    "id": "ingress-007",
+    "name": "metrics-ingress",
+    "labels": {
+      "app": "metrics",
+      "environment": "staging"
+    },
+    "hosts": [
+      "metrics.staging.example.com"
+    ]
+  },
+  {
+    "id": "ingress-008",
+    "name": "logging-ingress",
+    "labels": {
+      "app": "logging",
+      "environment": "production"
+    },
+    "hosts": [
+      "logs.example.com"
+    ]
   }
 ]

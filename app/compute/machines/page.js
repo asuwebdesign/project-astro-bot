@@ -19,6 +19,7 @@ import { Input } from "@/components/ui/input"
 import { DatatypeHeader } from "@/components/datatype-header"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import data from './data.json'
+import ResourceChip from "@/components/resource-chip"
 
 export default function Page() {
 
@@ -33,7 +34,7 @@ export default function Page() {
     <>
       <DatatypeHeader icon={<Cpu className="w-6 h-6" />} title="Machines" count="10" info={info} buttonLabel="Machine" />
 
-      <div className="grid grid-cols-4 gap-6">
+      <div className="grid grid-cols-4 gap-6 2xl:w-4/6 mx-auto my-0">
         <Card x-chunk="dashboard-05-chunk-1">
           <CardHeader className="pb-2">
             <CardDescription>This Week</CardDescription>
@@ -83,7 +84,7 @@ export default function Page() {
         </Card>
       </div>
 
-      <div className="flex flex-1">
+      <div className="flex flex-1 2xl:w-4/6 mx-auto my-0">
 
         <Table>
           <TableHeader>
@@ -101,14 +102,10 @@ export default function Page() {
             {data.map(item => (
               <TableRow key={item.id}>
                 <TableCell>
-                  <div className="flex items-center gap-2 font-medium">
-                    <Badge className=" font-medium">M</Badge>{item.name}
-                  </div>
+                  <ResourceChip type="primary" icon={<Cpu className="w-5 h-5" />} badge="M" label={item.name} meta="Machine" />
                 </TableCell>
                 <TableCell>
-                  <div className="flex items-center gap-2">
-                    <Badge className="font-medium" variant="secondary">NS</Badge>{item.node}
-                  </div>
+                  <ResourceChip type="secondary" icon={<Cpu className="w-5 h-5" />} badge="NS" label={item.node} meta="Node" />
                 </TableCell>
                 <TableCell>
                   <div className="flex items-center gap-2">
@@ -116,9 +113,9 @@ export default function Page() {
                     {item.phase}
                   </div>
                 </TableCell>
-                <TableCell>{item.providerState}</TableCell>
+                <TableCell>{item.provider_state}</TableCell>
                 <TableCell>{item.region}</TableCell>
-                <TableCell>{item.availabilityZone}</TableCell>
+                <TableCell>{item.availability_zone}</TableCell>
                 <TableCell>
                   <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
                 </TableCell>

@@ -1,11 +1,137 @@
 [
   {
-    "id": 1,
-    "name": "",
-    "namespace": "",
-    "machines": "",
-    "instanceType": "",
-    "cpu": "",
-    "memory": ""
+      "id": 1,
+      "name": "web-set-01",
+      "namespace": "frontend",
+      "num_machines": 10,
+      "instance_type": "t2.medium",
+      "cpu_usage": "75%",
+      "memory_usage": "60%"
+  },
+  {
+      "id": 2,
+      "name": "app-set-01",
+      "namespace": "backend",
+      "num_machines": 8,
+      "instance_type": "t2.large",
+      "cpu_usage": "80%",
+      "memory_usage": "70%"
+  },
+  {
+      "id": 3,
+      "name": "db-set-01",
+      "namespace": "database",
+      "num_machines": 5,
+      "instance_type": "m5.large",
+      "cpu_usage": "65%",
+      "memory_usage": "75%"
+  },
+  {
+      "id": 4,
+      "name": "cache-set-01",
+      "namespace": "caching",
+      "num_machines": 6,
+      "instance_type": "c5.large",
+      "cpu_usage": "50%",
+      "memory_usage": "55%"
+  },
+  {
+      "id": 5,
+      "name": "analytics-set-01",
+      "namespace": "analytics",
+      "num_machines": 12,
+      "instance_type": "m5.xlarge",
+      "cpu_usage": "85%",
+      "memory_usage": "65%"
+  },
+  {
+      "id": 6,
+      "name": "batch-set-01",
+      "namespace": "batch-processing",
+      "num_machines": 4,
+      "instance_type": "c5.xlarge",
+      "cpu_usage": "70%",
+      "memory_usage": "40%"
+  },
+  {
+      "id": 7,
+      "name": "search-set-01",
+      "namespace": "search",
+      "num_machines": 9,
+      "instance_type": "r5.large",
+      "cpu_usage": "60%",
+      "memory_usage": "80%"
+  },
+  {
+      "id": 8,
+      "name": "ml-set-01",
+      "namespace": "machine-learning",
+      "num_machines": 3,
+      "instance_type": "p3.2xlarge",
+      "cpu_usage": "90%",
+      "memory_usage": "85%"
+  },
+  {
+      "id": 9,
+      "name": "monitoring-set-01",
+      "namespace": "monitoring",
+      "num_machines": 7,
+      "instance_type": "t2.medium",
+      "cpu_usage": "55%",
+      "memory_usage": "50%"
+  },
+  {
+      "id": 10,
+      "name": "security-set-01",
+      "namespace": "security",
+      "num_machines": 6,
+      "instance_type": "c5.large",
+      "cpu_usage": "65%",
+      "memory_usage": "70%"
+  },
+  {
+      "id": 11,
+      "name": "api-set-01",
+      "namespace": "api",
+      "num_machines": 8,
+      "instance_type": "m5.large",
+      "cpu_usage": "75%",
+      "memory_usage": "60%"
+  },
+  {
+      "id": 12,
+      "name": "devops-set-01",
+      "namespace": "devops",
+      "num_machines": 5,
+      "instance_type": "r5.xlarge",
+      "cpu_usage": "80%",
+      "memory_usage": "85%"
+  },
+  {
+      "id": 13,
+      "name": "iot-set-01",
+      "namespace": "iot",
+      "num_machines": 10,
+      "instance_type": "m5.xlarge",
+      "cpu_usage": "85%",
+      "memory_usage": "90%"
+  },
+  {
+      "id": 14,
+      "name": "data-set-01",
+      "namespace": "data-processing",
+      "num_machines": 11,
+      "instance_type": "c5.2xlarge",
+      "cpu_usage": "65%",
+      "memory_usage": "75%"
+  },
+  {
+      "id": 15,
+      "name": "test-set-01",
+      "namespace": "testing",
+      "num_machines": 4,
+      "instance_type": "t2.small",
+      "cpu_usage": "45%",
+      "memory_usage": "40%"
   }
 ]

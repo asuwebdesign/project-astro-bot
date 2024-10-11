@@ -12,6 +12,7 @@ import { Ellipsis, Network } from "lucide-react"
 import data from './data.json'
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import ResourceChip from "@/components/resource-chip"
 
 export default function Page() {
 
@@ -25,19 +26,18 @@ export default function Page() {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="w-[100px]">Invoice</TableHead>
+              <TableHead>Name</TableHead>
               <TableHead>Status</TableHead>
-              <TableHead>Method</TableHead>
-              <TableHead className="text-right">Amount</TableHead>
+              <TableHead>Location</TableHead>
+              <TableHead>Service</TableHead>
+              <TableHead></TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {data.map(item => (
               <TableRow key={item.id}>
                 <TableCell>
-                  <div className="flex items-center gap-2 font-medium">
-                    <Badge className=" font-medium">BC</Badge>{item.name}
-                  </div>
+                  <ResourceChip type="primary" icon={<Network className="w-5 h-5" />} badge="R" label={item.name} meta="Route" />
                 </TableCell>
                 <TableCell>
                   <div className="flex items-center gap-2">

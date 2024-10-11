@@ -33,8 +33,8 @@ import { NavLink } from './nav-link'
 export function Navigation() {
   const pathname = usePathname()
 
-  const navHeadingDefaultClasses = 'flex items-center justify-between w-full rounded-full hover:bg-zinc-700 hover:text-white'
-  const navHeadingActiveClasses = 'flex items-center justify-between w-full rounded-full bg-zinc-800 hover:bg-zinc-700 hover:text-white'
+  const navHeadingDefaultClasses = 'flex items-center justify-between w-full rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-700 dark:text-white hover:text-black dark:hover:text-white'
+  const navHeadingActiveClasses = 'flex items-center justify-between w-full rounded-full bg-zinc-800 hover:bg-zinc-700 hover:text-white dark:text-white'
 
   return (
     <nav className="grid items-start gap-4 px-2 mb-4 text-sm lg:px-4">
@@ -87,7 +87,7 @@ export function Navigation() {
             <NavLink label="Machine sets" url="/compute/machine-sets" />
             <NavLink label="Nodes" url="/compute/nodes" />
           </ol>
-          <hr className="ml-10 my-2 border-zinc-700" />
+          <hr className="ml-10 my-2 border-zinc-300 dark:border-zinc-700" />
           <ol className="mt-2 ml-10">
             <NavLink label="Machine configs" url="/compute/machine-configs" />
             <NavLink label="Machine config pools" url="/compute/machine-config-pools" />
@@ -208,7 +208,7 @@ export function Navigation() {
             <NavLink label="Secrets" url="/workloads/secrets" />
             <NavLink label="Stateful sets" url="/workloads/stateful-sets" />
           </ol>
-          <hr className="ml-10 my-2 border-zinc-700" />
+          <hr className="ml-10 my-2 border-zinc-300 dark:border-zinc-700" />
           <ol className="ml-10">
             <NavLink label="Cron jobs" url="/workloads/cron-jobs" />
             <NavLink label="Daemon sets" url="/workloads/daemon-sets" />

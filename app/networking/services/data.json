@@ -1,9 +1,72 @@
 [
   {
-    "id": 1,
-    "name": "",
-    "labels": "",
-    "podSelector": "",
-    "location": ""
+    "id": "service-001",
+    "name": "frontend-service",
+    "status": "Active",
+    "method": "LoadBalancer",
+    "amount": 3
+  },
+  {
+    "id": "service-002",
+    "name": "backend-service",
+    "status": "Active",
+    "method": "ClusterIP",
+    "amount": 5
+  },
+  {
+    "id": "service-003",
+    "name": "admin-console-service",
+    "status": "Active",
+    "method": "NodePort",
+    "amount": 2
+  },
+  {
+    "id": "service-004",
+    "name": "api-service",
+    "status": "Active",
+    "method": "ClusterIP",
+    "amount": 4
+  },
+  {
+    "id": "service-005",
+    "name": "monitoring-service",
+    "status": "Active",
+    "method": "LoadBalancer",
+    "amount": 2
+  },
+  {
+    "id": "service-006",
+    "name": "metrics-service",
+    "status": "Active",
+    "method": "ClusterIP",
+    "amount": 1
+  },
+  {
+    "id": "service-007",
+    "name": "logging-service",
+    "status": "Active",
+    "method": "ClusterIP",
+    "amount": 3
+  },
+  {
+    "id": "service-008",
+    "name": "edge-service",
+    "status": "Active",
+    "method": "LoadBalancer",
+    "amount": 4
+  },
+  {
+    "id": "service-009",
+    "name": "public-api-service",
+    "status": "Active",
+    "method": "NodePort",
+    "amount": 2
+  },
+  {
+    "id": "service-010",
+    "name": "auth-service",
+    "status": "Active",
+    "method": "ClusterIP",
+    "amount": 3
   }
 ]

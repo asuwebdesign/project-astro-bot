@@ -19,6 +19,7 @@ import { Input } from "@/components/ui/input"
 import { DatatypeHeader } from "@/components/datatype-header"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import data from './data.json'
+import ResourceChip from "@/components/resource-chip"
 
 export default function Page() {
 
@@ -28,7 +29,7 @@ export default function Page() {
     <>
       <DatatypeHeader icon={<Cpu className="w-6 h-6" />} title="Machine autoscalers" count="10" info={info} buttonLabel="Machine autoscaler" />
 
-      <div className="grid grid-cols-4 gap-6">
+      <div className="grid grid-cols-4 gap-6 2xl:w-4/6 mx-auto my-0">
         <Card x-chunk="dashboard-05-chunk-1">
           <CardHeader className="pb-2">
             <CardDescription>This Week</CardDescription>
@@ -78,7 +79,7 @@ export default function Page() {
         </Card>
       </div>
 
-      <div className="flex flex-1">
+      <div className="flex flex-1 2xl:w-4/6 mx-auto my-0">
 
         <Table>
           <TableHeader>
@@ -94,17 +95,13 @@ export default function Page() {
             {data.map(item => (
               <TableRow key={item.id}>
                 <TableCell>
-                  <div className="flex items-center gap-2 font-medium">
-                    <Badge className=" font-medium">MA</Badge>{item.name}
-                  </div>
+                  <ResourceChip type="primary" icon={<Cpu className="w-5 h-5" />} badge="MA" label={item.name} meta="Machine autoscaler" />
                 </TableCell>
                 <TableCell>
-                  <div className="flex items-center gap-2">
-                    <Badge className="font-medium" variant="secondary">MS</Badge>{item.scaleTarget}
-                  </div>
+                  <ResourceChip type="secondary" badge="MS" label={item.scale_target} />
                 </TableCell>
-                <TableCell>{item.minReplicas}</TableCell>
-                <TableCell>{item.maxReplicas}</TableCell>
+                <TableCell>{item.min_replicas}</TableCell>
+                <TableCell>{item.max_replicas}</TableCell>
                 <TableCell>
                   <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
                 </TableCell>

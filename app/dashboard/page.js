@@ -82,7 +82,7 @@ export default function Page() {
         <h1 className="text-lg font-heading font-semibold md:text-2xl">Dashboard</h1>
       </div>
       <div className="flex flex-1 items-center justify-center rounded-lg border border-dashed shadow-sm" x-chunk="dashboard-02-chunk-1">
-        <Link href="/settings">Settings</Link>
+        <Link href="/settings">Dashboard stuff</Link>
       </div>
     </>
   )

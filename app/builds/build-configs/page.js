@@ -9,7 +9,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { Blocks, Ellipsis, Info, ListFilter, Plus, Search } from "lucide-react"
+import { Blocks, Ellipsis, Info, ListFilter, Plus, Search, Tags } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import {
@@ -24,6 +24,9 @@ import {
 } from "@/components/ui/popover"
 import { DatatypeHeader } from "@/components/datatype-header"
 import data from './data.json'
+import Link from "next/link"
+import ResourceChip from "@/components/resource-chip"
+import { Checkbox } from "@/components/ui/checkbox"
 
 export default function Page() {
 
@@ -94,6 +97,9 @@ export default function Page() {
         <Table>
           <TableHeader>
             <TableRow>
+              <TableHead className="w-[48px]">
+                <Checkbox />
+              </TableHead>
               <TableHead>Name</TableHead>
               <TableHead>Namespace</TableHead>
               <TableHead>Last run</TableHead>
@@ -107,14 +113,13 @@ export default function Page() {
             {data.map(item => (
               <TableRow key={item.id}>
                 <TableCell>
-                  <div className="flex items-center gap-2 font-medium">
-                    <Badge className=" font-medium">BC</Badge>{item.name}
-                  </div>
+                  <Checkbox />
                 </TableCell>
                 <TableCell>
-                  <div className="flex items-center gap-2">
-                    <Badge className="font-medium" variant="secondary">NS</Badge>{item.namespace}
-                  </div>
+                  <ResourceChip type="primary" icon={<Blocks className="w-5 h-5" />} badge="BC" label={item.name} meta="Build config" />
+                </TableCell>
+                <TableCell>
+                  <ResourceChip type="secondary" icon={<Tags className="w-5 h-5" />} badge="NS" label={item.namespace} meta="Namespace" />
                 </TableCell>
                 <TableCell>{item.lastRun}</TableCell>
                 <TableCell>{item.lastRunStatus}</TableCell>

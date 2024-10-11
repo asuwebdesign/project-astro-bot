@@ -1,11 +1,92 @@
 [
   {
-    "id": 1,
-    "name": "rhamilto-njptx-master-0",
-    "node": "ip-10-0-30-131.us-west-1.compute.internal",
-    "phase": "Provisioned as node",
-    "providerState": "Running",
-    "region": "US-West-1",
-    "availabilityZone": "US-West-1A"
+      "id": 1,
+      "name": "web-server-01",
+      "node": "node-01",
+      "region": "us-east",
+      "availability_zone": "us-east-1a",
+      "phase": "Provisioned as node",
+      "provider_state": "Running"
+  },
+  {
+      "id": 2,
+      "name": "app-server-01",
+      "node": "node-02",
+      "region": "us-west",
+      "availability_zone": "us-west-2b",
+      "phase": "Provisioned as node",
+      "provider_state": "Running"
+  },
+  {
+      "id": 3,
+      "name": "db-server-01",
+      "node": "node-03",
+      "region": "eu-central",
+      "availability_zone": "eu-central-1a",
+      "phase": "Provisioned as node",
+      "provider_state": "Running"
+  },
+  {
+      "id": 4,
+      "name": "cache-server-01",
+      "node": "node-04",
+      "region": "ap-southeast",
+      "availability_zone": "ap-southeast-1b",
+      "phase": "Provisioned as node",
+      "provider_state": "Running"
+  },
+  {
+      "id": 5,
+      "name": "web-server-02",
+      "node": "node-05",
+      "region": "us-east",
+      "availability_zone": "us-east-1b",
+      "phase": "Provisioned as node",
+      "provider_state": "Running"
+  },
+  {
+      "id": 6,
+      "name": "app-server-02",
+      "node": "node-06",
+      "region": "us-west",
+      "availability_zone": "us-west-2a",
+      "phase": "Provisioned as node",
+      "provider_state": "Running"
+  },
+  {
+      "id": 7,
+      "name": "db-server-02",
+      "node": "node-07",
+      "region": "eu-central",
+      "availability_zone": "eu-central-1b",
+      "phase": "Provisioned as node",
+      "provider_state": "Running"
+  },
+  {
+      "id": 8,
+      "name": "cache-server-02",
+      "node": "node-08",
+      "region": "ap-northeast",
+      "availability_zone": "ap-northeast-1a",
+      "phase": "Provisioned as node",
+      "provider_state": "Running"
+  },
+  {
+      "id": 9,
+      "name": "web-server-03",
+      "node": "node-09",
+      "region": "us-east",
+      "availability_zone": "us-east-1c",
+      "phase": "Provisioned as node",
+      "provider_state": "Running"
+  },
+  {
+      "id": 10,
+      "name": "app-server-03",
+      "node": "node-10",
+      "region": "us-west",
+      "availability_zone": "us-west-2c",
+      "phase": "Provisioned as node",
+      "provider_state": "Running"
   }
 ]

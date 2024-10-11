@@ -1,8 +1,102 @@
 [
   {
-    "id": 1,
-    "name": "",
-    "namespace": "",
-    "podSelector": ""
+    "id": "np-001",
+    "name": "allow-frontend-traffic",
+    "namespace": "production",
+    "podSelector": {
+      "app": "frontend"
+    }
+  },
+  {
+    "id": "np-002",
+    "name": "deny-all-external-traffic",
+    "namespace": "production",
+    "podSelector": {}
+  },
+  {
+    "id": "np-003",
+    "name": "allow-backend-to-db",
+    "namespace": "production",
+    "podSelector": {
+      "app": "backend"
+    }
+  },
+  {
+    "id": "np-004",
+    "name": "allow-monitoring-traffic",
+    "namespace": "monitoring",
+    "podSelector": {
+      "app": "monitoring"
+    }
+  },
+  {
+    "id": "np-005",
+    "name": "deny-ingress-from-internet",
+    "namespace": "staging",
+    "podSelector": {
+      "app": "internal-api"
+    }
+  },
+  {
+    "id": "np-006",
+    "name": "allow-internal-api-traffic",
+    "namespace": "staging",
+    "podSelector": {
+      "app": "internal-api"
+    }
+  },
+  {
+    "id": "np-007",
+    "name": "allow-metrics-collector",
+    "namespace": "metrics",
+    "podSelector": {
+      "app": "metrics-collector"
+    }
+  },
+  {
+    "id": "np-008",
+    "name": "allow-admin-console-access",
+    "namespace": "admin",
+    "podSelector": {
+      "app": "admin-console"
+    }
+  },
+  {
+    "id": "np-009",
+    "name": "allow-logging-service",
+    "namespace": "logging",
+    "podSelector": {
+      "app": "logging"
+    }
+  },
+  {
+    "id": "np-010",
+    "name": "deny-all-external-access",
+    "namespace": "dev",
+    "podSelector": {}
+  },
+  {
+    "id": "np-011",
+    "name": "allow-database-traffic",
+    "namespace": "production",
+    "podSelector": {
+      "app": "database"
+    }
+  },
+  {
+    "id": "np-012",
+    "name": "allow-internal-messaging",
+    "namespace": "messaging",
+    "podSelector": {
+      "app": "message-broker"
+    }
+  },
+  {
+    "id": "np-013",
+    "name": "allow-edge-service-access",
+    "namespace": "edge",
+    "podSelector": {
+      "app": "edge-service"
+    }
   }
 ]

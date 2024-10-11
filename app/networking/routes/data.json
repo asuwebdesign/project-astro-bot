@@ -1,9 +1,128 @@
 [
   {
-    "id": 1,
-    "name": "",
-    "status": "",
-    "location": "",
-    "service": ""
+    "id": "route-001",
+    "name": "frontend-route",
+    "status": "Active",
+    "location": "https://frontend.example.com",
+    "service": "frontend-service"
+  },
+  {
+    "id": "route-002",
+    "name": "backend-route",
+    "status": "Active",
+    "location": "https://backend.example.com",
+    "service": "backend-service"
+  },
+  {
+    "id": "route-003",
+    "name": "admin-console-route",
+    "status": "Active",
+    "location": "https://admin-console.example.com",
+    "service": "admin-console-service"
+  },
+  {
+    "id": "route-004",
+    "name": "api-route",
+    "status": "Active",
+    "location": "https://api.example.com",
+    "service": "api-service"
+  },
+  {
+    "id": "route-005",
+    "name": "monitoring-route",
+    "status": "Active",
+    "location": "https://monitoring.example.com",
+    "service": "monitoring-service"
+  },
+  {
+    "id": "route-006",
+    "name": "metrics-route",
+    "status": "Active",
+    "location": "https://metrics.example.com",
+    "service": "metrics-service"
+  },
+  {
+    "id": "route-007",
+    "name": "logging-route",
+    "status": "Active",
+    "location": "https://logs.example.com",
+    "service": "logging-service"
+  },
+  {
+    "id": "route-008",
+    "name": "edge-service-route",
+    "status": "Active",
+    "location": "https://edge.example.com",
+    "service": "edge-service"
+  },
+  {
+    "id": "route-009",
+    "name": "internal-api-route",
+    "status": "Inactive",
+    "location": "https://internal-api.example.com",
+    "service": "internal-api-service"
+  },
+  {
+    "id": "route-010",
+    "name": "public-api-route",
+    "status": "Active",
+    "location": "https://public-api.example.com",
+    "service": "public-api-service"
+  },
+  {
+    "id": "route-011",
+    "name": "dev-frontend-route",
+    "status": "Active",
+    "location": "https://frontend-dev.example.com",
+    "service": "frontend-dev-service"
+  },
+  {
+    "id": "route-012",
+    "name": "staging-backend-route",
+    "status": "Active",
+    "location": "https://backend-staging.example.com",
+    "service": "backend-staging-service"
+  },
+  {
+    "id": "route-013",
+    "name": "admin-staging-route",
+    "status": "Active",
+    "location": "https://admin-staging.example.com",
+    "service": "admin-staging-service"
+  },
+  {
+    "id": "route-014",
+    "name": "file-storage-route",
+    "status": "Active",
+    "location": "https://storage.example.com",
+    "service": "file-storage-service"
+  },
+  {
+    "id": "route-015",
+    "name": "auth-service-route",
+    "status": "Active",
+    "location": "https://auth.example.com",
+    "service": "auth-service"
+  },
+  {
+    "id": "route-016",
+    "name": "payment-service-route",
+    "status": "Active",
+    "location": "https://payment.example.com",
+    "service": "payment-service"
+  },
+  {
+    "id": "route-017",
+    "name": "message-broker-route",
+    "status": "Inactive",
+    "location": "https://messaging.example.com",
+    "service": "message-broker-service"
+  },
+  {
+    "id": "route-018",
+    "name": "database-admin-route",
+    "status": "Active",
+    "location": "https://db-admin.example.com",
+    "service": "database-admin-service"
   }
 ]

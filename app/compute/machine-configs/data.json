@@ -1,10 +1,82 @@
 [
   {
-    "id": 1,
-    "name": "",
-    "generatedByController": "",
-    "ignitionVersion": "",
-    "osImageURL": "",
-    "created": ""
+    "id": "mc-010",
+    "name": "worker-config-v10",
+    "controllerLabel": "machine-config-controller",
+    "ignitionVersion": "3.3.0",
+    "osImageURL": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:abc123v10",
+    "createdDate": "2024-10-09T10:30:00Z"
+  },
+  {
+    "id": "mc-009",
+    "name": "master-config-v9",
+    "controllerLabel": "machine-config-controller",
+    "ignitionVersion": "3.3.0",
+    "osImageURL": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:abc123v9",
+    "createdDate": "2024-10-08T14:45:00Z"
+  },
+  {
+    "id": "mc-008",
+    "name": "infra-config-v8",
+    "controllerLabel": "infra-node-config-controller",
+    "ignitionVersion": "3.2.0",
+    "osImageURL": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:abc123v8",
+    "createdDate": "2024-10-07T09:10:00Z"
+  },
+  {
+    "id": "mc-007",
+    "name": "worker-config-v7",
+    "controllerLabel": "machine-config-controller",
+    "ignitionVersion": "3.2.0",
+    "osImageURL": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:abc123v7",
+    "createdDate": "2024-10-06T17:35:00Z"
+  },
+  {
+    "id": "mc-006",
+    "name": "master-config-v6",
+    "controllerLabel": "machine-config-controller",
+    "ignitionVersion": "3.2.0",
+    "osImageURL": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:abc123v6",
+    "createdDate": "2024-10-05T08:50:00Z"
+  },
+  {
+    "id": "mc-005",
+    "name": "infra-config-v5",
+    "controllerLabel": "infra-node-config-controller",
+    "ignitionVersion": "3.1.0",
+    "osImageURL": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:abc123v5",
+    "createdDate": "2024-10-04T13:20:00Z"
+  },
+  {
+    "id": "mc-004",
+    "name": "worker-config-v4",
+    "controllerLabel": "machine-config-controller",
+    "ignitionVersion": "3.1.0",
+    "osImageURL": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:abc123v4",
+    "createdDate": "2024-10-03T12:15:00Z"
+  },
+  {
+    "id": "mc-003",
+    "name": "master-config-v3",
+    "controllerLabel": "machine-config-controller",
+    "ignitionVersion": "3.1.0",
+    "osImageURL": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:abc123v3",
+    "createdDate": "2024-10-02T11:45:00Z"
+  },
+  {
+    "id": "mc-002",
+    "name": "infra-config-v2",
+    "controllerLabel": "infra-node-config-controller",
+    "ignitionVersion": "3.0.0",
+    "osImageURL": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:abc123v2",
+    "createdDate": "2024-10-01T16:00:00Z"
+  },
+  {
+    "id": "mc-001",
+    "name": "worker-config-v1",
+    "controllerLabel": "machine-config-controller",
+    "ignitionVersion": "3.0.0",
+    "osImageURL": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:abc123v1",
+    "createdDate": "2024-09-30T09:00:00Z"
   }
 ]

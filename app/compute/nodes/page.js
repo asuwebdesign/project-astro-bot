@@ -12,6 +12,7 @@ import {
 import { CircleCheck, Cpu, Ellipsis } from "lucide-react"
 import data from './data.json'
 import { Button } from "@/components/ui/button"
+import ResourceChip from "@/components/resource-chip"
 
 export default function Page() {
 
@@ -20,7 +21,7 @@ export default function Page() {
   return (
     <>
       <DatatypeHeader icon={<Cpu className="w-6 h-6" />} title="Nodes" count="10" info={info} buttonLabel="Node" />
-      <div className="flex flex-1">
+      <div className="flex flex-1 2xl:w-4/6 mx-auto my-0">
 
         <Table>
           <TableHeader>
@@ -40,19 +41,20 @@ export default function Page() {
             {data.map(item => (
               <TableRow key={item.id}>
                 <TableCell>
-                  <div className="flex items-center gap-2 font-medium">
-                    <Badge className=" font-medium">BC</Badge>{item.name}
-                  </div>
+                  <ResourceChip type="primary" icon={<Cpu className="w-5 h-5" />} badge="N" label={item.name} meta="Node" />
                 </TableCell>
                 <TableCell>
                   <div className="flex items-center gap-2">
-                    <Badge className="font-medium" variant="secondary">NS</Badge>{item.namespace}
+                    <CircleCheck className="w-4 h-4" /> {item.status}
                   </div>
                 </TableCell>
-                <TableCell>{item.lastRun}</TableCell>
-                <TableCell>{item.lastRunStatus}</TableCell>
-                <TableCell>{item.lastRunTime}</TableCell>
-                <TableCell>{item.lastRunDuration}</TableCell>
+                <TableCell>{item.role}</TableCell>
+                <TableCell>{item.number_of_pods}</TableCell>
+                <TableCell>{item.memory_usage}</TableCell>
+                <TableCell>{item.cpu_usage}</TableCell>
+                <TableCell>{item.filesystem_usage}</TableCell>
+                <TableCell>{item.create_date}</TableCell>
+                <TableCell>{item.instance_type}</TableCell>
                 <TableCell>
                   <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
                 </TableCell>

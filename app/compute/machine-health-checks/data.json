@@ -1,9 +1,52 @@
 [
   {
-    "id": 1,
-    "name": "rhamilto-njptx-master-0",
-    "scaleTarget": "ip-10-0-30-131.us-west-1.compute.internal",
-    "minReplicas": 1,
-    "maxReplicas": 12
+      "id": 10,
+      "name": "HealthCheck-AppServer-03",
+      "created_date": "Oct 25, 2024"
+  },
+  {
+      "id": 9,
+      "name": "HealthCheck-WebServer-03",
+      "created_date": "Sep 20, 2024"
+  },
+  {
+      "id": 8,
+      "name": "HealthCheck-CacheServer-02",
+      "created_date": "Aug 15, 2024"
+  },
+  {
+      "id": 7,
+      "name": "HealthCheck-DBServer-02",
+      "created_date": "Jul 10, 2024"
+  },
+  {
+      "id": 6,
+      "name": "HealthCheck-AppServer-02",
+      "created_date": "Jun 5, 2024"
+  },
+  {
+      "id": 5,
+      "name": "HealthCheck-WebServer-02",
+      "created_date": "May 30, 2024"
+  },
+  {
+      "id": 4,
+      "name": "HealthCheck-CacheServer-01",
+      "created_date": "Apr 25, 2024"
+  },
+  {
+      "id": 3,
+      "name": "HealthCheck-DBServer-01",
+      "created_date": "Mar 20, 2024"
+  },
+  {
+      "id": 2,
+      "name": "HealthCheck-AppServer-01",
+      "created_date": "Feb 15, 2024"
+  },
+  {
+      "id": 1,
+      "name": "HealthCheck-WebServer-01",
+      "created_date": "Jan 10, 2024"
   }
 ]

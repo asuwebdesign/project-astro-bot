@@ -1,7 +1,49 @@
 [
   {
     "id": 1,
-    "name": "frontend-app-build",
+    "name": "openjdk-8-image-stream",
+    "labels": "frontend-dev",
+    "created": "Sep 23, 2024 - 7:48am"
+  },
+  {
+    "id": 2,
+    "name": "nodejs-14-builder",
+    "labels": "frontend-dev",
+    "created": "Sep 23, 2024 - 7:48am"
+  },
+  {
+    "id": 3,
+    "name": "ruby-3.0-runtime",
+    "labels": "frontend-dev",
+    "created": "Sep 23, 2024 - 7:48am"
+  },
+  {
+    "id": 4,
+    "name": "python-3.9-app",
+    "labels": "frontend-dev",
+    "created": "Sep 23, 2024 - 7:48am"
+  },
+  {
+    "id": 5,
+    "name": "golang-1.18-build",
+    "labels": "frontend-dev",
+    "created": "Sep 23, 2024 - 7:48am"
+  },
+  {
+    "id": 6,
+    "name": "nginx-latest-stream",
+    "labels": "frontend-dev",
+    "created": "Sep 23, 2024 - 7:48am"
+  },
+  {
+    "id": 7,
+    "name": "mariadb-10.5-base",
+    "labels": "frontend-dev",
+    "created": "Sep 23, 2024 - 7:48am"
+  },
+  {
+    "id": 8,
+    "name": "quarkus-native-build",
     "labels": "frontend-dev",
     "created": "Sep 23, 2024 - 7:48am"
   }

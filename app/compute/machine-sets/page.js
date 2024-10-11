@@ -12,6 +12,7 @@ import { Cpu, Ellipsis } from "lucide-react"
 import data from './data.json'
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import ResourceChip from "@/components/resource-chip"
 
 export default function Page() {
 
@@ -20,34 +21,33 @@ export default function Page() {
   return (
     <>
       <DatatypeHeader icon={<Cpu className="w-6 h-6" />} title="Machine sets" count="10" info={info} buttonLabel="Machine set" />
-      <div className="flex flex-1">
+      <div className="flex flex-1 2xl:w-4/6 mx-auto my-0">
 
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="w-[100px]">Invoice</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead>Method</TableHead>
-              <TableHead className="text-right">Amount</TableHead>
+              <TableHead>Name</TableHead>
+              <TableHead>Namespace</TableHead>
+              <TableHead>Machines</TableHead>
+              <TableHead>Instance type</TableHead>
+              <TableHead>CPU</TableHead>
+              <TableHead>Memory</TableHead>
+              <TableHead></TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {data.map(item => (
               <TableRow key={item.id}>
                 <TableCell>
-                  <div className="flex items-center gap-2 font-medium">
-                    <Badge className=" font-medium">BC</Badge>{item.name}
-                  </div>
+                  <ResourceChip type="primary" badge="MS" label={item.name} icon={<Cpu className="w-5 h-5" />} meta="Machine set" />
                 </TableCell>
                 <TableCell>
-                  <div className="flex items-center gap-2">
-                    <Badge className="font-medium" variant="secondary">NS</Badge>{item.namespace}
-                  </div>
+                  <ResourceChip type="secondary" badge="NS" label={item.namespace} />
                 </TableCell>
-                <TableCell>{item.lastRun}</TableCell>
-                <TableCell>{item.lastRunStatus}</TableCell>
-                <TableCell>{item.lastRunTime}</TableCell>
-                <TableCell>{item.lastRunDuration}</TableCell>
+                <TableCell>{item.num_machines}</TableCell>
+                <TableCell>{item.instance_type}</TableCell>
+                <TableCell>{item.cpu_usage}</TableCell>
+                <TableCell>{item.memory_usage}</TableCell>
                 <TableCell>
                   <Button variant="ghost" className="rounded-full"><Ellipsis className="w-5 h-5" /></Button>
                 </TableCell>

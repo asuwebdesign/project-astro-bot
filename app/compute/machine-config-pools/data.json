@@ -1,9 +1,58 @@
 [
   {
-    "id": 1,
-    "name": "",
-    "configuration": "",
-    "degraded": "",
-    "updateStatus": ""
+    "id": "mcp-001",
+    "name": "worker-pool",
+    "configuration": {
+      "source": "worker-config-v10",
+      "ignitionVersion": "3.3.0",
+      "osImageURL": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:abc123v10"
+    },
+    "degraded": false,
+    "updateStatus": {
+      "updating": false,
+      "lastUpdated": "2024-10-09T10:30:00Z"
+    }
+  },
+  {
+    "id": "mcp-002",
+    "name": "master-pool",
+    "configuration": {
+      "source": "master-config-v9",
+      "ignitionVersion": "3.3.0",
+      "osImageURL": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:abc123v9"
+    },
+    "degraded": false,
+    "updateStatus": {
+      "updating": true,
+      "lastUpdated": "2024-10-08T12:15:00Z"
+    }
+  },
+  {
+    "id": "mcp-003",
+    "name": "infra-pool",
+    "configuration": {
+      "source": "infra-config-v8",
+      "ignitionVersion": "3.2.0",
+      "osImageURL": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:abc123v8"
+    },
+    "degraded": true,
+    "updateStatus": {
+      "updating": false,
+      "lastUpdated": "2024-10-07T16:40:00Z"
+    }
+  },
+  {
+    "id": "mcp-004",
+    "name": "edge-pool",
+    "configuration": {
+      "source": "worker-config-v7",
+      "ignitionVersion": "3.2.0",
+      "osImageURL": "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:abc123v7"
+    },
+    "degraded": false,
+    "updateStatus": {
+      "updating": true,
+      "lastUpdated": "2024-10-06T18:30:00Z"
+    }
   }
 ]

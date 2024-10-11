@@ -12,6 +12,7 @@ import { Database, Ellipsis } from "lucide-react"
 import data from './data.json'
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import ResourceChip from "@/components/resource-chip"
 
 export default function Page() {
 
@@ -35,9 +36,7 @@ export default function Page() {
             {data.map(item => (
               <TableRow key={item.id}>
                 <TableCell>
-                  <div className="flex items-center gap-2 font-medium">
-                    <Badge className=" font-medium">BC</Badge>{item.name}
-                  </div>
+                  <ResourceChip type="primary" badge="VSC" label={item.name} />
                 </TableCell>
                 <TableCell>
                   <div className="flex items-center gap-2">

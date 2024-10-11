@@ -19,6 +19,9 @@ import {
 } from "@/components/ui/popover"
 import { DatatypeHeader } from "@/components/datatype-header"
 import data from './data.json'
+import Link from "next/link"
+import ResourceChip from "@/components/resource-chip"
+import { Checkbox } from "@/components/ui/checkbox"
 
 export default function Page() {
 
@@ -89,6 +92,7 @@ export default function Page() {
         <Table>
           <TableHeader>
             <TableRow>
+              <TableHead className="w-[48px]"></TableHead>
               <TableHead>Name</TableHead>
               <TableHead>Labels</TableHead>
               <TableHead>Created</TableHead>
@@ -99,9 +103,10 @@ export default function Page() {
             {data.map(item => (
               <TableRow key={item.id}>
                 <TableCell>
-                  <div className="flex items-center gap-2 font-medium">
-                    <Badge className=" font-medium">IS</Badge>{item.name}
-                  </div>
+                  <Checkbox />
+                </TableCell>
+                <TableCell>
+                  <ResourceChip type="primary" icon={<Blocks className="w-5 h-5" />} badge="IS" label={item.name} meta="Image stream" />
                 </TableCell>
                 <TableCell>
                   <div className="flex items-center gap-2">
